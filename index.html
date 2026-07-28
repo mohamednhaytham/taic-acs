@@ -1,3 +1,6 @@
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -9,7 +12,7 @@
 <meta name="robots" content="index, follow">
 <meta name="author" content="فني تكييف الطائف">
 <link rel="canonical" href="https://www.taif-ac-tech.sa/">
-
+ 
 <!-- Open Graph (Facebook / WhatsApp link previews) -->
 <meta property="og:type" content="business.business">
 <meta property="og:locale" content="ar_SA">
@@ -18,16 +21,16 @@
 <meta property="og:url" content="https://www.taif-ac-tech.sa/">
 <meta property="og:site_name" content="فني تكييف الطائف">
 <meta property="og:image" content="https://www.taif-ac-tech.sa/og-cover.jpg">
-
+ 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="فني تكييف الطائف | خبراء التبريد لراحتك">
 <meta name="twitter:description" content="تركيب، صيانة، تعبئة فريون، وغسيل مكيفات في الطائف. خبرة أكثر من 7 سنوات.">
-
+ 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
-
+ 
 <!-- Local Business structured data (helps Google show map pack / rich results) -->
 <script type="application/ld+json">
 {
@@ -152,6 +155,11 @@
     box-shadow:0 14px 30px -10px rgba(255,122,51,.6);
   }
   .btn-primary:hover{background:var(--orange-dark); transform:translateY(-2px);}
+  .btn-whatsapp{
+    background:var(--whatsapp); color:#fff;
+    box-shadow:0 14px 30px -10px rgba(37,211,102,.55);
+  }
+  .btn-whatsapp:hover{background:#1ebd5a; transform:translateY(-2px);}
   .btn-outline{
     background:rgba(255,255,255,.08); color:#fff; border:1.5px solid rgba(255,255,255,.55);
     backdrop-filter:blur(6px);
@@ -159,7 +167,7 @@
   .btn-outline:hover{background:rgba(255,255,255,.18); transform:translateY(-2px);}
   .btn-dark{background:var(--navy); color:#fff;}
   .btn-dark:hover{background:var(--navy-dark); transform:translateY(-2px);}
-
+ 
   /* ---------- HEADER ---------- */
   header{
     position:fixed; inset:0 0 auto 0; z-index:100;
@@ -188,7 +196,7 @@
   }
   .nav-toggle{display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:6px;}
   .nav-toggle span{width:24px; height:2.5px; background:#fff; border-radius:2px;}
-
+ 
   /* ---------- HERO ---------- */
   .hero{
     min-height:100vh;
@@ -227,7 +235,7 @@
   .hero-stats div{color:#fff;}
   .hero-stats strong{display:block; font-family:'Cairo'; font-weight:900; font-size:1.7rem; color:var(--orange);}
   .hero-stats span{color:#B9CEDD; font-size:.85rem; font-weight:700;}
-
+ 
   /* ---- Signature: cooling gauge ---- */
   .gauge-wrap{
     display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -256,11 +264,11 @@
   .gauge-scale{
     display:flex; justify-content:space-between; margin-top:14px; color:#9FBFD3; font-size:.78rem; font-weight:700;
   }
-
+ 
   /* ---------- AIRFLOW DIVIDER (signature motif) ---------- */
   .airflow{width:100%; height:70px; display:block; margin-top:-2px;}
   .icicle-row{width:100%; display:block; margin-top:-6px; position:relative; z-index:2;}
-
+ 
   /* ---------- FROST PARTICLES ---------- */
   .frost-particles{position:absolute; inset:0; overflow:hidden; z-index:1; pointer-events:none;}
   .frost-flake{
@@ -273,7 +281,7 @@
     90%{opacity:.5;}
     100%{transform:translateY(115vh) translateX(24px) rotate(220deg); opacity:0;}
   }
-
+ 
   /* ---------- TRUST STRIP ---------- */
   .trust-strip{
     background:linear-gradient(90deg, var(--ice), #DFF1F8, var(--ice));
@@ -284,7 +292,7 @@
   }
   .trust-item{display:flex; align-items:center; gap:10px; color:var(--navy); font-weight:800; font-size:.95rem;}
   .trust-item svg{flex-shrink:0;}
-
+ 
   /* ---------- SERVICES ---------- */
   .services{padding:110px 0 100px; background:transparent;}
   .services::before{
@@ -324,7 +332,7 @@
   .svc-body{padding:24px 22px 28px;}
   .svc-body h3{font-size:1.15rem; color:var(--navy); margin-bottom:10px; font-weight:800;}
   .svc-body p{color:var(--gray); font-size:.92rem;}
-
+ 
   /* ---------- WHY CHOOSE US ---------- */
   .why{
     padding:100px 0; background:var(--navy);
@@ -349,7 +357,7 @@
   }
   .why-card h3{color:#fff; font-size:1.15rem; margin-bottom:10px;}
   .why-card p{color:#C4D7E4; font-size:.92rem;}
-
+ 
   /* ---------- CONTACT ---------- */
   .contact{padding:110px 0; background:transparent; position:relative;}
   .contact::before{
@@ -375,11 +383,31 @@
   }
   .info-line b{display:block; font-size:.78rem; color:#9FBFD3; font-weight:700; margin-bottom:3px;}
   .info-line a, .info-line span.val{font-weight:800; font-size:1rem;}
+  .map-wrap{position:relative; margin-top:20px;}
   .map-embed{
-    margin-top:20px; border-radius:16px; overflow:hidden; height:200px;
+    border-radius:16px; overflow:hidden; height:200px;
     border:1px solid rgba(255,255,255,.18); filter:saturate(.85) brightness(.95);
   }
-
+  .map-click-catch{
+    position:absolute; inset:0; z-index:5; border-radius:16px;
+    display:flex; align-items:flex-end; justify-content:center; padding-bottom:14px;
+    background:linear-gradient(transparent 55%, rgba(7,28,49,.65));
+    opacity:0; transition:opacity .25s ease; cursor:pointer;
+  }
+  .map-wrap:hover .map-click-catch, .map-wrap:focus-within .map-click-catch{opacity:1;}
+  .map-click-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:#fff; color:var(--navy); font-weight:800; font-size:.85rem;
+    padding:9px 16px; border-radius:100px; box-shadow:0 10px 20px -8px rgba(0,0,0,.4);
+    transform:translateY(6px); transition:transform .25s ease;
+  }
+  .map-wrap:hover .map-click-badge{transform:translateY(0);}
+  @media (hover:none){
+    /* touch devices: always show a subtle tappable hint since there's no hover */
+    .map-click-catch{opacity:1; background:linear-gradient(transparent 70%, rgba(7,28,49,.55));}
+    .map-click-badge{transform:translateY(0); padding:7px 14px; font-size:.78rem;}
+  }
+ 
   .form-card{
     background:rgba(255,255,255,.85);
     backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
@@ -397,7 +425,7 @@
   .field input:focus, .field select:focus{outline:none; border-color:var(--blue);}
   .form-card button{width:100%; margin-top:8px;}
   .form-note{display:flex; align-items:center; gap:8px; margin-top:14px; color:var(--gray); font-size:.8rem;}
-
+ 
   /* ---------- FOOTER ---------- */
   footer{background:var(--navy-dark); color:#9FBFD3; padding:50px 0 26px;}
   .footer-top{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,.1); margin-bottom:24px;}
@@ -406,7 +434,7 @@
   .footer-links a{color:#9FBFD3; font-size:.9rem; font-weight:700;}
   .footer-links a:hover{color:var(--orange);}
   .footer-bottom{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:.8rem;}
-
+ 
   /* ---------- FLOATING WHATSAPP ---------- */
   .float-wa{
     position:fixed; bottom:26px; inset-inline-start:26px; z-index:200;
@@ -419,10 +447,10 @@
     70%{box-shadow:0 0 0 14px rgba(37,211,102,0), 0 14px 30px -8px rgba(37,211,102,.65);}
     100%{box-shadow:0 0 0 0 rgba(37,211,102,0), 0 14px 30px -8px rgba(37,211,102,.65);}
   }
-
+ 
   .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
   .reveal.in{opacity:1; transform:translateY(0);}
-
+ 
   @media (max-width:980px){
     .hero-grid{grid-template-columns:1fr; gap:50px;}
     .gauge-wrap{order:-1;}
@@ -444,7 +472,7 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- ================= HEADER ================= -->
 <header id="siteHeader">
   <div class="container nav-wrap">
@@ -470,7 +498,7 @@
     </div>
   </div>
 </header>
-
+ 
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="frost-particles" id="frostParticles" aria-hidden="true"></div>
@@ -495,7 +523,7 @@
         <div><strong>&lt;30 د</strong><span>وقت وصول متوسط</span></div>
       </div>
     </div>
-
+ 
     <!-- SIGNATURE: cooling gauge -->
     <div class="gauge-wrap">
       <div class="gauge-card">
@@ -520,7 +548,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- airflow divider -->
   <svg class="airflow" viewBox="0 0 1200 70" preserveAspectRatio="none">
     <path d="M0,40 C150,10 300,70 450,40 C600,10 750,70 900,40 C1050,10 1150,50 1200,35 L1200,70 L0,70 Z" fill="#EAF6FB"/>
@@ -540,7 +568,7 @@
     </g>
   </svg>
 </section>
-
+ 
 <!-- ================= TRUST STRIP ================= -->
 <div class="trust-strip">
   <div class="container">
@@ -562,7 +590,7 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- ================= SERVICES ================= -->
 <section class="services" id="services">
   <div class="container">
@@ -573,7 +601,7 @@
         <p class="section-sub">من التركيب الأول إلى الصيانة الدورية — فريق فنيين معتمدين يغطي كل احتياجات التبريد في منزلك أو منشأتك.</p>
       </div>
     </div>
-
+ 
     <div class="svc-grid" id="svcGrid">
       <!-- 1 -->
       <article class="svc-card">
@@ -644,7 +672,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ================= WHY CHOOSE US ================= -->
 <section class="why" id="why">
   <div class="container">
@@ -678,7 +706,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ================= CONTACT ================= -->
 <section class="contact" id="contact">
   <div class="container">
@@ -687,12 +715,12 @@
       <h2 class="section-title">جاهزين نبرد يومك</h2>
       <p class="section-sub">اتصل، راسلنا واتساب، أو عبّي النموذج وفريقنا يتواصل معك خلال دقائق.</p>
     </div>
-
+ 
     <div class="contact-grid">
       <div class="info-card">
         <h3>بيانات التواصل</h3>
         <p>متاحين طوال أيام الأسبوع لخدمتك في أي وقت.</p>
-
+ 
         <div class="info-line">
           <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <div>
@@ -721,16 +749,24 @@
             <a href="https://www.google.com/maps?q=21.273167,40.41475" target="_blank" rel="noopener">افتح في خرائط جوجل</a>
           </div>
         </div>
-
-        <div class="map-embed">
-          <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=40.40275%2C21.261167%2C40.42675%2C21.285167&layer=mapnik&marker=21.273167%2C40.41475"
-            width="100%" height="100%" style="border:0;" loading="lazy"
-            title="موقع فني تكييف الطائف على الخريطة">
-          </iframe>
+ 
+        <div class="map-wrap">
+          <div class="map-embed">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=40.40275%2C21.261167%2C40.42675%2C21.285167&layer=mapnik&marker=21.273167%2C40.41475"
+              width="100%" height="100%" style="border:0;" loading="lazy"
+              title="موقع فني تكييف الطائف على الخريطة">
+            </iframe>
+          </div>
+          <a class="map-click-catch" href="https://www.google.com/maps?q=21.273167,40.41475" target="_blank" rel="noopener" aria-label="افتح الموقع في خرائط جوجل">
+            <span class="map-click-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 21c-4-4.5-8-8.2-8-12.2A8 8 0 0 1 12 3a8 8 0 0 1 8 5.8c0 4-4 7.7-8 12.2z" stroke="#0B2A4A" stroke-width="1.8"/><circle cx="12" cy="9" r="2.2" stroke="#0B2A4A" stroke-width="1.8"/></svg>
+              افتح في خرائط جوجل
+            </span>
+          </a>
         </div>
       </div>
-
+ 
       <div class="form-card">
         <h3>اطلب فني الآن</h3>
         <p class="note">عبّي بياناتك ونضغط زر الإرسال يفتح واتساب برسالتك جاهزة لفريقنا.</p>
@@ -754,7 +790,7 @@
               <option>بيع وشراء مكيفات مستعملة</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btn btn-whatsapp">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.29-1.38a9.9 9.9 0 0 0 4.7 1.2h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7-1.87-1.87-4.36-2.9-7.01-2.9z"/></svg>
             إرسال الطلب عبر واتساب
           </button>
@@ -768,7 +804,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="container">
@@ -792,12 +828,12 @@
     </div>
   </div>
 </footer>
-
+ 
 <!-- ================= FLOATING WHATSAPP ================= -->
 <a class="float-wa" href="https://wa.me/966542653161" target="_blank" rel="noopener" aria-label="راسلنا عبر واتساب">
   <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.29-1.38a9.9 9.9 0 0 0 4.7 1.2h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7-1.87-1.87-4.36-2.9-7.01-2.9zm5.8 14.14c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .9 2.14.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.35 1.45.29.15.46.13.63-.08.17-.2.72-.84.91-1.13.19-.28.38-.24.63-.14.26.1 1.65.78 1.93.92.29.15.48.22.55.34.07.13.07.75-.17 1.43z"/></svg>
 </a>
-
+ 
 <script>
   // ambient frost particles (skipped if user prefers reduced motion)
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -818,13 +854,13 @@
       wrap.appendChild(flake);
     }
   }
-
+ 
   // header scroll state
   const header = document.getElementById('siteHeader');
   window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 40);
   });
-
+ 
   // mobile nav toggle
   const navToggle = document.getElementById('navToggle');
   const mainNav = document.getElementById('mainNav');
@@ -837,7 +873,7 @@
       mainNav.querySelector('ul').style.flexDirection='column'; mainNav.querySelector('ul').style.gap='16px';
     }
   });
-
+ 
   // gauge animation
   function animateGauge(){
     const arc = document.getElementById('gaugeArc');
@@ -859,7 +895,7 @@
     requestAnimationFrame(step);
   }
   window.addEventListener('load', animateGauge);
-
+ 
   // scroll reveal
   const revealTargets = document.querySelectorAll('.svc-card');
   const io = new IntersectionObserver((entries) => {
@@ -871,7 +907,7 @@
     });
   }, {threshold:.15});
   revealTargets.forEach(el => io.observe(el));
-
+ 
   // lead form -> WhatsApp
   document.getElementById('leadForm').addEventListener('submit', function(e){
     e.preventDefault();
@@ -880,7 +916,7 @@
     const name = nameEl.value.trim();
     const phone = phoneEl.value.trim();
     const service = document.getElementById('service').value;
-
+ 
     const phoneDigits = phone.replace(/[^\d]/g, '');
     if(!name || phoneDigits.length < 9){
       const msgEl = document.getElementById('formMsg');
@@ -889,17 +925,17 @@
       if(!name) nameEl.focus(); else phoneEl.focus();
       return;
     }
-
+ 
     const text = `مرحباً، اسمي ${name}\nرقم جوالي: ${phone}\nأحتاج خدمة: ${service}`;
     const url = `https://wa.me/966542653161?text=${encodeURIComponent(text)}`;
-
+ 
     // Try opening in a new tab first (works on desktop); fall back to same-tab
     // navigation if the popup was blocked (more reliable on mobile browsers).
     const win = window.open(url, '_blank');
     if(!win || win.closed || typeof win.closed === 'undefined'){
       window.location.href = url;
     }
-
+ 
     const msgEl = document.getElementById('formMsg');
     msgEl.textContent = 'تم فتح واتساب — أكمل الإرسال من هناك.';
     msgEl.style.color = '#1e9e56';
@@ -908,3 +944,11 @@
 </script>
 </body>
 </html>
+ 
+
+
+
+
+
+
+
