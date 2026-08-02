@@ -14,6 +14,10 @@ Index · HTML
 <meta name="robots" content="index, follow">
 <meta name="author" content="فني تكييف الطائف">
 <link rel="canonical" href="https://www.taif-ac-tech.sa/">
+<link rel="alternate" hreflang="ar-sa" href="https://www.taif-ac-tech.sa/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%230B2A4A%22/%3E%3Cpath%20d%3D%22M50%2015v70M15%2050h70M25%2025l50%2050M75%2025L25%2075%22%20stroke%3D%22white%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%230B2A4A%22/%3E%3Cpath%20d%3D%22M50%2015v70M15%2050h70M25%2025l50%2050M75%2025L25%2075%22%20stroke%3D%22white%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0B2A4A">
  
 <!-- Open Graph (Facebook / WhatsApp link previews) -->
 <meta property="og:type" content="business.business">
@@ -78,6 +82,39 @@ Index · HTML
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"تعبئة فريون"}},
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"غسيل وتنظيف مكيفات"}},
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"بيع وشراء مكيفات مستعملة"}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "كم يستغرق تركيب المكيف الواحد؟",
+      "acceptedAnswer": {"@type": "Answer", "text": "عادة بين ساعة إلى ساعتين للمكيف الواحد حسب نوع الوحدة وطبيعة الموقع، ونوضح لك المدة بالضبط أثناء المعاينة قبل البدء."}
+    },
+    {
+      "@type": "Question",
+      "name": "هل تقدمون خدمة الطوارئ خارج أوقات الدوام؟",
+      "acceptedAnswer": {"@type": "Answer", "text": "نعم، فريقنا متاح لحالات الطوارئ في أي وقت داخل الطائف — تواصل معنا مباشرة عبر الاتصال أو واتساب وسنصلك بأسرع وقت ممكن."}
+    },
+    {
+      "@type": "Question",
+      "name": "كم مرة يحتاج المكيف لتعبئة الفريون؟",
+      "acceptedAnswer": {"@type": "Answer", "text": "المكيف السليم لا يحتاج تعبئة متكررة؛ إذا احتجت تعبئة أكثر من مرة في السنة فهذا مؤشر على تسريب يستحق الفحص، ونقدم هذا الفحص كجزء من خدمة الصيانة."}
+    },
+    {
+      "@type": "Question",
+      "name": "هل تشترون مكيفات مستعملة بحالة عادية؟",
+      "acceptedAnswer": {"@type": "Answer", "text": "نعم، نقيّم المكيف حسب عمره وحالته وكفاءته، ونعطيك سعرًا عادلًا سواء أردت البيع أو استبداله بوحدة أخرى."}
+    },
+    {
+      "@type": "Question",
+      "name": "هل تغطون كل أحياء الطائف؟",
+      "acceptedAnswer": {"@type": "Answer", "text": "نعم، نغطي جميع أحياء الطائف، ونحرص على الوصول في أسرع وقت ممكن أينما كنت داخل المدينة."}
+    }
   ]
 }
 </script>
@@ -360,6 +397,32 @@ Index · HTML
   .why-card h3{color:#fff; font-size:1.15rem; margin-bottom:10px;}
   .why-card p{color:#C4D7E4; font-size:.92rem;}
  
+  /* ---------- FAQ ---------- */
+  .faq{padding:100px 0 110px; background:#fff; position:relative;}
+  .faq::before{
+    content:""; position:absolute; inset:0; z-index:-1;
+    background:radial-gradient(650px 380px at 92% 15%, rgba(191,227,240,.45), transparent 60%);
+  }
+  .faq-list{max-width:820px; display:flex; flex-direction:column; gap:14px;}
+  .faq-item{
+    background:rgba(255,255,255,.7); backdrop-filter:blur(10px);
+    border:1px solid rgba(191,227,240,.9); border-radius:14px; padding:6px 22px;
+    transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  .faq-item[open]{border-color:var(--blue-soft); box-shadow:0 16px 34px -22px rgba(46,134,171,.5);}
+  .faq-item summary{
+    padding:16px 0; font-weight:800; color:var(--navy); cursor:pointer;
+    display:flex; align-items:center; justify-content:space-between; gap:14px;
+    list-style:none; font-size:1rem;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"+"; font-size:1.4rem; font-weight:400; color:var(--blue); flex-shrink:0;
+    transition:transform .25s ease;
+  }
+  .faq-item[open] summary::after{transform:rotate(45deg);}
+  .faq-item p{color:var(--gray); font-size:.92rem; padding-bottom:18px; margin-top:-6px;}
+ 
   /* ---------- CONTACT ---------- */
   .contact{padding:110px 0; background:transparent; position:relative;}
   .contact::before{
@@ -488,6 +551,7 @@ Index · HTML
       <ul>
         <li><a href="#services">خدماتنا</a></li>
         <li><a href="#why">لماذا تختارنا</a></li>
+        <li><a href="#faq">أسئلة شائعة</a></li>
         <li><a href="#contact">تواصل معنا</a></li>
       </ul>
     </nav>
@@ -502,6 +566,7 @@ Index · HTML
 </header>
  
 <!-- ================= HERO ================= -->
+<main>
 <section class="hero">
   <div class="frost-particles" id="frostParticles" aria-hidden="true"></div>
   <div class="container hero-grid">
@@ -709,6 +774,39 @@ Index · HTML
   </div>
 </section>
  
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div style="max-width:600px; margin-bottom:44px;">
+      <div class="eyebrow">أسئلة شائعة</div>
+      <h2 class="section-title">كل اللي حابب تعرفه</h2>
+      <p class="section-sub">أسئلة يسألها عملاؤنا في الطائف قبل ما يحجزوا موعد.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>كم يستغرق تركيب المكيف الواحد؟</summary>
+        <p>عادة بين ساعة إلى ساعتين للمكيف الواحد حسب نوع الوحدة وطبيعة الموقع، ونوضح لك المدة بالضبط أثناء المعاينة قبل البدء.</p>
+      </details>
+      <details class="faq-item">
+        <summary>هل تقدمون خدمة الطوارئ خارج أوقات الدوام؟</summary>
+        <p>نعم، فريقنا متاح لحالات الطوارئ في أي وقت داخل الطائف — تواصل معنا مباشرة عبر الاتصال أو واتساب وسنصلك بأسرع وقت ممكن.</p>
+      </details>
+      <details class="faq-item">
+        <summary>كم مرة يحتاج المكيف لتعبئة الفريون؟</summary>
+        <p>المكيف السليم لا يحتاج تعبئة متكررة؛ إذا احتجت تعبئة أكثر من مرة في السنة فهذا مؤشر على تسريب يستحق الفحص، ونقدم هذا الفحص كجزء من خدمة الصيانة.</p>
+      </details>
+      <details class="faq-item">
+        <summary>هل تشترون مكيفات مستعملة بحالة عادية؟</summary>
+        <p>نعم، نقيّم المكيف حسب عمره وحالته وكفاءته، ونعطيك سعرًا عادلًا سواء أردت البيع أو استبداله بوحدة أخرى.</p>
+      </details>
+      <details class="faq-item">
+        <summary>هل تغطون كل أحياء الطائف؟</summary>
+        <p>نعم، نغطي جميع أحياء الطائف، ونحرص على الوصول في أسرع وقت ممكن أينما كنت داخل المدينة.</p>
+      </details>
+    </div>
+  </div>
+</section>
+ 
 <!-- ================= CONTACT ================= -->
 <section class="contact" id="contact">
   <div class="container">
@@ -808,6 +906,7 @@ Index · HTML
 </section>
  
 <!-- ================= FOOTER ================= -->
+</main>
 <footer>
   <div class="container">
     <div class="footer-top">
